@@ -36,6 +36,14 @@
       return {
         asist: [
           {
+            name: "Wisnuyasha Faizal",
+            nrp: 5027211036
+          },
+          {
+            name: "Aloysius B. M.",
+            nrp: 5027211008
+          },
+          {
             name: "Midyanisa Yuniar",
             nrp: 5027211025
           },
@@ -46,14 +54,6 @@
           {
             name: "Rifqi Akhmad Maulana",
             nrp: 5027211035
-          },
-          {
-            name: "Wisnuyasha Faizal",
-            nrp: 5027211036
-          },
-          {
-            name: "Ahnaf Musyaffa",
-            nrp: 5027211038
           },
           {
             name: "Moh. Sulthan Arief Rahmatullah",
