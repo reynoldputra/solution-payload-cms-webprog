@@ -20,7 +20,7 @@ export default {
       )
         return;
       const newUser = {
-        id: Date.now(),
+        id: Date.now().toString(),
         name: this.inputName,
         nrp: this.inputNrp,
         email: this.inputEmail,
