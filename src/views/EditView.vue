@@ -1,7 +1,20 @@
 <template>
-  <div class="flex justify-center items-center  mt-20 ">
+  <div class="flex justify-center items-center mt-20">
     <div class="p-4 w-1/2">
-      <h2 class="text-2xl font-bold text-gray-700 mb-4">Edit User</h2>
+      <h2 class="text-2xl font-bold text-gray-700 mb-4 flex items-center">
+        <div @click="$router.go(-1)" >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            class="cursor-pointer"
+          />
+        </svg>
+        </div>
+        Edit User
+      </h2>
       <div class="flex flex-col gap-4">
         <div class="flex flex-col">
           <label class="text-gray-700 font-semibold">Name</label>
@@ -59,7 +72,6 @@ export default {
       }
     },
     updateUser(index){
-        
         const updatedUser = {
             id: index,
             name: this.inputNewName,

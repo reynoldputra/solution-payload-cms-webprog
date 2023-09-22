@@ -21,7 +21,12 @@ const router = createRouter({
       path: '/edit/:id',
       name: 'edit',
       component: () => import('../views/EditView.vue')
-    }
+    },
+    {
+      path: '/:catchAll(.*)', // atau `:pathMatch(.*)*`
+      name: 'NotFound',
+      component: () => import('../views/NotFound.vue')
+   },
   ]
 })
 
