@@ -1,3 +1,4 @@
+import axios from "axios";
 import { reactive } from "vue";
 
 export const userStore = reactive({
@@ -24,5 +25,29 @@ export const userStore = reactive({
       userStore.users.splice(userIndex + 1, 1, updatedUser);
     }
   }
-  
+
 });
+
+export const todoStore = reactive({
+  todos: [
+  ],
+  async getTodo() {
+    const res = await axios.get("http://localhost:3000/api/todos", { params: { depth: 1 } })
+    console.log(res.data.docs)
+    this.todos = []
+    this.todos.push(...res.data.docs)
+  },
+  async createTodo(todo) {
+    const res = await axios.post("http://localhost:3000/api/todos", {
+      ...todo
+    })
+
+    console.log(res)
+    console.log(res.status)
+    if(res.status == 201) {
+      this.getTodo()
+    }
+  },
+});
+
+

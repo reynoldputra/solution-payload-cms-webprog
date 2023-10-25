@@ -3,6 +3,9 @@ const payload = require('payload')
 /** @type {import('payload/types').CollectionConfig} */
 const Category = {
   slug: 'category',
+  access : {
+    read : () => true
+  },
   hooks : {
     afterOperation : [
       async (args) => {

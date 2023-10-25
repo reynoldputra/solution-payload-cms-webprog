@@ -3,6 +3,10 @@ const payload = require('payload')
 /** @type {import('payload/types').CollectionConfig} */
 const Todo = {
   slug: 'todos',
+  access : {
+    read : () => true,
+    create : () => true
+  },
   hooks : {
     afterOperation : [
       async (args) => {
@@ -25,7 +29,6 @@ const Todo = {
       required: true,
     },
     {
-      
       name: "category",
       required: true,
       type : "relationship",
