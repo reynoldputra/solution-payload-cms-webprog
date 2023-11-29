@@ -9,7 +9,7 @@ const Category = {
   hooks : {
     afterOperation : [
       async (args) => {
-        if(["create", "update", "delete"].includes(args.operation)) {
+        if(["create", "update", "delete", "deleteByID"].includes(args.operation)) {
           await payload.create({
             collection: 'log',
             data : {
